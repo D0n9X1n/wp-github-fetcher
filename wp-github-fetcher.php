@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: github-fetcher
+Plugin Name: wp-github-fetcher
 Plugin URI: https://github.com/MikeCoder/github-fetcher
 Description: Yet, just another wp plugins for fetching pages from github.
 Version: 1.0
@@ -33,14 +33,14 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ?>
 
 <?php
-add_action('post_submitbox_misc_actions', 'sync_with_github_misc_actions');
-function sync_with_github_misc_actions($post) {
+add_action('post_submitbox_misc_actions', 'fetch_from_github_misc_actions');
+function fetch_from_github_misc_actions($post) {
 ?>
 <div class="misc-pub-section tabs-panel">
-    <script src="<?php echo plugins_url('github-fetcher/js/fetcher.js'); ?>"></script>
+    <script src="<?php echo plugins_url('wp-github-fetcher/js/fetcher.js'); ?>"></script>
     <label style="width:40%" for="wp_github_url_txt">Github URL:</label><br/>
     <Input id="wp_github_url_txt" type="text" class="form-required" style="height:100%; width: 100%" name="wp_github_url"/>
-    <a id="wp_github_url_btn" style="text-align:center; width:80%" onclick="fetch_github_url('<?php echo plugins_url('github-fetcher/api.php'); ?>')" class="button button-primary" value="Sync" name="sync"/>Sync</a>
+    <a id="wp_github_url_btn" style="text-align:center; width:80%" onclick="fetch_github_url('<?php echo plugins_url('wp-github-fetcher/api/api.php'); ?>')" class="button button-primary" value="Sync" name="sync"/>Sync</a>
 </div>
 <?php
 }
