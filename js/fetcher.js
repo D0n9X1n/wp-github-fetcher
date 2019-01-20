@@ -47,7 +47,6 @@ function fetch_github_url(api_url) {
     },
     success: function(data) {
       data = eval(data);
-
       if (data.status_code == 1) {
         $("#content-html")[0].click();
         $("#content")[0].value = data.content;

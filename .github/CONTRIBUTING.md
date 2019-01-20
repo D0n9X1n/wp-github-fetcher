@@ -20,5 +20,3 @@
   * Suggest your change as a new [issue] using the label `enhancement` **BEFORE** you start writing code.
 
 Thanks for contributing! :heart:
-
-
