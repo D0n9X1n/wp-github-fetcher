@@ -29,11 +29,12 @@ define("PARSE_ERROR", 4);
 
 $status_code = OK;
 
+$doc_info    = [];
 $title       = "";
 $message     = "";
 $content     = "";
 
-if (empty($_POST['github_url'])) {
+if (empty($_POST['github_url']) || !preg_match('/github.com\/(.*?)\/(.*?)\//', $_POST['github_url'], $doc_info)) {
     $status_code = NO_PARAM;
     $message = "No Parameters - github_url";
     $content = "";
@@ -71,7 +72,18 @@ if (!preg_match("/<article.*?>([\s|\S]+)<\/article>/", $content, $matchers)) {
     if (preg_match("/<p>([\s|\S]+)<\/p>/", $content, $matchers)) {
         $content = $matchers[1];
     }
+
+    // replace the image url
+    $image_url_old = '/img src=(.*?raw)\//';
+    $image_url_new = 'img src="https://raw.githubusercontent.com/'.$doc_info[1].'/'.$doc_info[2].'/';
+    $content = preg_replace($image_url_old, $image_url_new, $content);
+
+    // replace the link url
+    $link_url_old = '/a href=(.*?blob)\//';
+    $link_url_new = 'a href="https://raw.githubusercontent.com/'.$doc_info[1].'/'.$doc_info[2].'/';
+    $content = preg_replace($link_url_old, $link_url_new, $content);
 }
+
 goto OUTPUT;
 
 //=====================================

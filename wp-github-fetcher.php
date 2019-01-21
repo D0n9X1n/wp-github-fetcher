@@ -3,7 +3,7 @@
 Plugin Name: WP Github Fetcher
 Plugin URI: https://github.com/MikeCoder/github-fetcher
 Description: Yet, just another wp plugins for fetching pages from github.
-Version: 0.0.1
+Version: 0.0.2
 Author: MikeCoder
 Author URI: https://mikecoder.cn
  */

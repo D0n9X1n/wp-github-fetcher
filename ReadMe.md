@@ -9,6 +9,10 @@ For emlog, I used to write a blog to show the rendered result from github. Becau
 
 So, for wordpress, I need to write such a plugin myself mostly.
 
+### Feature:
++ Github CDN Speed up.
++ Github favorite markdown style.
+
 ### How to Use:
 Once active the plugin, you open your wordpress editor page and you will see such a input like below:
 > ![Plugin](./images/wp-github-fetcher.png)
