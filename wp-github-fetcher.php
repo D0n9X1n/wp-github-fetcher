@@ -3,12 +3,11 @@
 Plugin Name: WP Github Fetcher
 Plugin URI: https://github.com/MikeCoder/wp-github-fetcher
 Description: Yet, just another wp plugins for fetching pages from github.
-Version: 0.0.2
+Version: 0.0.3
 Author: MikeCoder
 Author URI: https://mikecoder.cn
  */
 ?>
-
 <?php
 /*
 Copyright © 2016 TangDongxin
@@ -31,7 +30,6 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 ?>
-
 <?php
 add_action('post_submitbox_misc_actions', 'fetch_from_github_misc_actions');
 function fetch_from_github_misc_actions($post) {
