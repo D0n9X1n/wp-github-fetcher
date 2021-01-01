@@ -1,6 +1,6 @@
 Wordpress Github Fetcher
 ---
-[![GitHub version](https://badge.fury.io/gh/MikeCoder%2Fwp-github-fetcher.svg)](https://badge.fury.io/gh/MikeCoder%2Fwp-github-fetcher)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/D0n9x1n/wp-github-fetcher?include_prereleases)
 
 ### Motivation:
 For me, my habit for writing blogs is write a markdown file and put all the images into a folder same level then push them into Github. Then, I need to figure out how to make my Blog system to show the content.
